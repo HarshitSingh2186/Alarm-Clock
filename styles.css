@@ -10,7 +10,9 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #10101E;
+    /* background: #565690; */  
+    background-image: url(alarm-clock-bg.jpg);
+    background-size: cover;
 }
 
 ::-webkit-scrollbar{
@@ -19,7 +21,7 @@ body{
 
 
 .alarm{
-    border: 3px solid #2E94E3;
+    border: 3px solid #11b46a;
     border-radius: 8px;
 }
 
@@ -28,16 +30,27 @@ body{
     color: #fff;
     background: #10101E;
     font-family: "Segoe UI",sans-serif;
+    height: 190px;
     width: 340px;
     padding: 15px 10px;
     transition: 0.5s;
     transition-property: background,box-shadow;
 }
 
+#gifContainer img {
+    margin-top: 30px;
+    height: 8vh;
+    max-width: 11vh;
+    position:sticky;
+    left: 49.7%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+  } 
+
 .datetime:hover{
 
-    background: #2E94E3;
-    box-shadow: 0 0 30px #2E94E3;
+    background: #95559b;
+    box-shadow: 0 0 30px #d849be;
     border-radius: 5px;
 }
 
@@ -63,7 +76,7 @@ body{
 } 
 
 .time span:last-child{
-    background: #2E94E3;
+    background: #7a9cb5;
     font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
@@ -73,7 +86,7 @@ body{
 }
 
 hr{
-    border: 1px solid #2E94E3;
+    border: 1px solid #11b46a;
     margin: 20px auto;
 }
 
@@ -85,11 +98,11 @@ hr{
 }
 
 .column select{
-    background: #10101E;
+    background: #176a6c;
     color: #fff;
     text-align: center;
     padding: 8px 4px;
-    border: 1px solid #2E94E3;
+    border: 1px solid #11b46a;
     border-radius: 18px;
 }
 
@@ -97,8 +110,8 @@ hr{
 #btn-setAlarm, .btn-delete, #stopAlarm{
     padding: 5px;
     color: #fff;
-    background: #2E94E3;
-    border: 1px solid #2E94E3;
+    background: #7a9cb5;
+    border: 1px solid #7a9cb5;
     border-radius: 18px;
 }
 
@@ -114,12 +127,12 @@ hr{
 
 #btn-setAlarm:hover, .btn-delete:hover, #stopAlarm:hover{
     cursor: pointer;
-    background: #2E94E3;
-    box-shadow: 0 0 30px #2E94E3;
+    background: #6388a4;
+    box-shadow: 0 0 30px #6388a4;
 }
 
 h3{
-    color: #fff;
+    color: #3bc23d;
     font-family: "Segoe UI", sans-serif;
     font-size: 20px;
     font-weight: 900;
@@ -142,4 +155,8 @@ h3{
     justify-content: center;
     align-items: center;
     margin: 6px auto;
+}
+
+#myAudio{
+    display: none;
 }
