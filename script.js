@@ -5,7 +5,8 @@ const selectMenu = document.querySelectorAll("select");
 const setAlarmBtn = document.querySelector("#btn-setAlarm");
 let alarmCount = 0;
 let alarmTime;
-let ring = new Audio("audio/Alarm-ringtone.mp3");
+// let ring = new Audio("Alarm-ringtone.mp3");
+var ring = document.getElementById("myAudio");
 
 
 // script for Time and Date
@@ -46,10 +47,14 @@ function updateClock(){
 
     for(var i=0;i<alarmListArr.length;i++){
         if(alarmListArr[i]==`${hr.pad(2)}:${min.pad(2)}:${sec.pad(2)} ${period}`){
-            console.log("Alarm ringing...");
+            console.log("Alarm-ringtone.mp3");
             ring.load();
             ring.play();
             document.querySelector("#stopAlarm").style.visibility = "visible";
+            
+            var gifContainer = document.getElementById("gifContainer");
+            gifContainer.innerHTML = '<img src="Alarm_Clock.gif" alt="Alarm GIF">';
+            
         }
     }
 
@@ -118,4 +123,9 @@ function deleteAlarm(click_id){
 function stopAlarm(){
     ring.pause();
     document.querySelector("#stopAlarm").style.visibility= "hidden";
+    document.querySelector("#gifContainer").style.visibility="hidden";
 }
+
+stopButton.addEventListener("stopAlarm()", function() {
+    gifElement.style.display = "none";
+})
